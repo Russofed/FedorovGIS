@@ -666,8 +666,50 @@
             color: var(--accent-color);
         }
         
+        .footer-contacts {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .contact-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 25px;
+            border-radius: 10px;
+            min-width: 200px;
+            transition: var(--transition);
+        }
+        
+        .contact-box:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+        }
+        
+        .contact-box h4 {
+            color: var(--accent-color);
+            margin-bottom: 8px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .contact-box p, .contact-box a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        
+        .contact-box a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        
         .copyright {
-            margin-top: 30px;
+            margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.7);
@@ -747,6 +789,16 @@
             .plugins-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .footer-contacts {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-box {
+                width: 100%;
+                max-width: 300px;
+            }
         }
     </style>
 </head>
@@ -788,6 +840,7 @@
                 <li><a href="#skills">Навыки</a></li>
                 <li><a href="#experience">Опыт</a></li>
                 <li><a href="#examples">Примеры работ</a></li>
+                <li><a href="#contact">Контакты</a></li>
             </ul>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -1110,6 +1163,41 @@
         </div>
     </section>
     
+    <!-- Contacts Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Контакты</h2>
+            </div>
+            <div class="section-content">
+                <div class="education-item">
+                    <h3>Свяжитесь со мной</h3>
+                    <p>Я открыт для новых профессиональных возможностей и сотрудничества. Буду рад обсудить ваши проекты и предложения.</p>
+                    
+                    <div class="materials-grid" style="margin-top: 30px;">
+                        <div class="material-item">
+                            <h4><i class="fas fa-envelope"></i> Электронная почта</h4>
+                            <p>Основной способ связи</p>
+                            <a href="mailto:russorur@mail.ru" class="material-link">russorur@mail.ru</a>
+                        </div>
+                        
+                        <div class="material-item">
+                            <h4><i class="fab fa-telegram"></i> Telegram</h4>
+                            <p>Быстрая связь и общение</p>
+                            <a href="https://t.me/russofed" class="material-link" target="_blank">@russofed</a>
+                        </div>
+                        
+                        <div class="material-item">
+                            <h4><i class="fas fa-phone"></i> Телефон</h4>
+                            <p>Звонки и WhatsApp</p>
+                            <a href="tel:+79197026130" class="material-link">+7 (919) 702-61-30</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -1122,11 +1210,28 @@
                     <a href="#skills">Навыки</a>
                     <a href="#experience">Опыт</a>
                     <a href="#examples">Примеры работ</a>
+                    <a href="#contact">Контакты</a>
+                </div>
+                
+                <div class="footer-contacts">
+                    <div class="contact-box">
+                        <h4><i class="fas fa-envelope"></i> Почта</h4>
+                        <a href="mailto:russorur@mail.ru">russorur@mail.ru</a>
+                    </div>
+                    
+                    <div class="contact-box">
+                        <h4><i class="fab fa-telegram"></i> Telegram</h4>
+                        <a href="https://t.me/russofed" target="_blank">@russofed</a>
+                    </div>
+                    
+                    <div class="contact-box">
+                        <h4><i class="fas fa-phone"></i> Телефон</h4>
+                        <a href="tel:+79197026130">+7 (919) 702-61-30</a>
+                    </div>
                 </div>
                 
                 <div class="copyright">
                     <p>&copy; 2025 Александр Федоров. Все права защищены.</p>
-                    <p>Резюме для размещения на GitHub Pages</p>
                 </div>
             </div>
         </div>
